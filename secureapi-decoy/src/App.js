@@ -11,7 +11,7 @@ import {
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Feed from "./Pages/Feed";
-
+import Post from "./Pages/Post";
 
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Feed" element={<Feed />} />
+          <Route path="/Post" element={<Post />} />
 
           <Route
             path="/"

@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { Row, Col, Container, Card } from "react-bootstrap";
 import axios from "axios";
 
-
-function Dashboard() {
+function Post() {
   useEffect(() => {
     let user_id = localStorage.getItem("userID");
     let headers = {
@@ -23,31 +22,32 @@ function Dashboard() {
   
       
     });
-        return (
-            <div>
-
-        <div style={{ padding: "10px" }}>
+    const [appList, setAppList] = useState(["A", "B", "C"]);
+    return (
+      <div style={{ padding: "10px" }}>
         <h1 style={{ textAlign: "right", marginRight: "10px" }}>
           Hello, Welcome
         </h1>
-        </div>
-
-        <input type="text" placeholder="Write something..."/>
-            <br/>
-            <Card><br/>
-            <Card.Header>UserNo.</Card.Header>
-            <Card.Body>
-              <blockquote className="blockquote mb-0">
-                <p>
-                  {' '}
-                  Do you have any detail to share{' '}
-                </p>
-              </blockquote>
-            </Card.Body>
-            </Card>
-            </div>
-
+        <Container fluid>
+          {appList.length != 0 ? (
+            appList.map((item) => (
+              <Row key={item} style={{ margin: "10px" }}>
+                <Col>
+                  {" "}
+                  <Card>
+                    <button>
+                    <Card.Body> App Name:{item.appName}</Card.Body>
+                    </button>
+                  </Card>
+                </Col>
+              </Row>
+            ))
+          ) : (
+            <Row>No Data to Show</Row>
+          )}
+        </Container>
+      </div>
     );
 }
 
-export default Dashboard;
+export default Post;
