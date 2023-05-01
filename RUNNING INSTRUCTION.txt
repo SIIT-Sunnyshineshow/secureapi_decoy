@@ -1,0 +1,13 @@
+*ต้องลง nodejs ก่อนเพื่อรันโปรแกรม
+https://nodejs.org/en
+
+เปิด Front-end
+1) ใช้ Terminal/Windows Powershell เปิดไปที่ ./secureapi-decoy
+2) พิมพ์ว่า npm install (เฉพาะตอนรันครั้งแรก)
+3) npm start
+
+ถ้ารันถูกต้องหน้าเว็บจะต้องเด้งขึ้นมา 
+ในกรณีที่เปิดหลายหน้าเว็บ แล้วมีขึ้นมาว่าแอปนี้จะให้รันในพอร์ตอื่น ให้กด y
+
+username: Sunnyshineshow
+Password: Sunnyshineshow
